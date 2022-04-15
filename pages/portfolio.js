@@ -87,6 +87,19 @@ export default function Portfolio() {
                         </li>
 
                         <li>
+                            <Image src="/images/portfolio.png" width={200} height={200} objectFit="cover" className="rounded-full" />
+                            <div className="list-info">
+                                <header>
+                                    <h3>NextJS Portfolio Site</h3>
+                                    <p>A simple portfolio page designed and written by me, made up with CSS animations and written on NextJS</p>
+                                </header>
+                                <div className="links">
+                                    <Link href="https://github.com/eeguney/my-portfolio-site"><a className="github"><Icons.Github size={22} /> Github</a></Link>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
                             <Image src="/images/tamercapital.png" width={200} height={200} objectFit="cover" className="rounded-full" />
                             <div className="list-info">
                                 <header>
