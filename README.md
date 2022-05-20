@@ -1,4 +1,24 @@
 # Emre Güney Portfolio Website
+A simple portfolio site built in Next.js with React Hooks and CSS Animations.
+
+## Take a look;
+
+Here is [DEMO](https://portfolio.emreguney.xyz/)!
+
+![DEMO](assets/DEMO.gif)
+
+## Built with;
+
+- [NextJS](https://nextjs.org/)
+- [React](https://tr.reactjs.org/)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Redux](https://redux.js.org/)
+- [React Router](https://reactrouter.com/)
+
+## Contributing;
+
+- If you have problems please leave an issue from [here](https://github.com/eeguney/my-portfolio-site/issues)
+- Consider forking the project and submitting new pull requests. I am much likely control [my github account](https://github.com/eeguney/)
 
 ## Getting Started
 
