@@ -122,9 +122,10 @@ section {
 }
 body {
   height: 100%;
-  background: linear-gradient(#460000, #0ada15),
+  /* background: linear-gradient(#460000, #0ada15),
     linear-gradient(to top left, #6a00ce, #0a005a),
-    linear-gradient(to top right, #0c55c1, #000000);
+    linear-gradient(to top right, #0c55c1, #000000); */
+  background-color: black;
   background-attachment: fixed;
   background-blend-mode: screen;
   animation-delay: 0.7s;
@@ -289,6 +290,7 @@ li {
 
 #header a svg {
   transition: all 0.3s ease;
+  z-index: 2;
 }
 
 #header a::before {
@@ -313,10 +315,14 @@ li {
     background: transparent;
     top: inherit;
   }
-  #header a:hover svg {
-    transform: rotate(15deg) scale(1.1);
+  #header a:not(.activeLink):hover svg {
+    transform: rotate(15deg);
   }
-  #header .activeLink:hover svg {
+  #header .activeLink {
+    transform: scale(1);
+    transition: all 0.2s ease;
+  }
+  #header .activeLink:hover {
     transform: scale(1.1);
   }
   #header .activeLink:hover::before {
@@ -339,7 +345,7 @@ li {
   width: 80px;
   height: 80px;
   display: flex;
-  background: linear-gradient(#00ff40, #0092ff);
+  background: linear-gradient( #ff4154, #8906ff);
   justify-content: center;
   align-items: center;
   border-radius: 999px;
@@ -347,6 +353,20 @@ li {
   position: relative;
   padding: 3px;
   animation: bigger 0.3s linear;
+}
+
+.activeLink:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background: linear-gradient( black, black);
+  border-radius: 50%;
 }
 
 @keyframes bigger {
@@ -636,7 +656,7 @@ li {
   display: flex;
   padding: 2rem 1rem;
   flex-direction: column;
-  background: #0000001c;
+  background: #ffffff12;
   align-items: center;
   gap: 1.5rem;
   color: white;
@@ -699,7 +719,7 @@ li {
 .links .demo {
   padding: 2px 2rem;
   border-radius: 5px;
-  background: #00000017;
+  background: #5c5c5c38;
   color: white !important;
   font-size: 0.9rem;
 }
@@ -709,23 +729,23 @@ li {
   border-radius: 5px;
   gap: 10px;
   fill: #fff;
-  background: #72dbe1;
+  background: #04257d;
   display: flex;
   font-size: 0.9rem;
   align-items: center;
 }
 
 .links .demo:hover {
-  background: #00000025;
+  background: #50505038;
 }
 
 .links .github:hover {
-  background: #5ec5ca;
+  background: #021b61;
 }
 
 @media screen and (min-width: 1024px) {
   .portfolio-list li {
-    padding: 1rem;
+    padding: 3rem;
   }
 
   .portfolio-list li .list-info {
@@ -828,7 +848,7 @@ li {
 
 .photo-and-user-info .image {
   padding: 9px;
-  box-shadow: 0px 0px 17px 7px #00000066;
+  box-shadow: 0px 0px 17px 7px #ffffff12;
   border-radius: 999px;
   display: flex;
   width: 250px;
@@ -894,7 +914,7 @@ li {
   margin: 2rem 0;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  background: #0000001c;
+  background: #ffffff12;
 }
 
 .aboutme-container h3 {

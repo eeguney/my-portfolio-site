@@ -1,5 +1,3 @@
-
-  
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -13,6 +11,10 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          <div className="bg-blur-orange"></div>
+          <div className="bg-blur-purple"></div>
+          <div className="bg-blur-green"></div>
+          <div class="music-player"></div>
           <Main />
           <NextScript />
         </body>
